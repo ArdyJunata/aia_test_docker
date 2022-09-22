@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: frontend
     environment:
-      - REACT_APP_API_URL=127.0.0.1:${APP_PORT}
+      - REACT_APP_API_URL=${BASE_URL}:${APP_PORT}
     ports:
       - 80:3000
     depends_on:
@@ -21,5 +21,5 @@ services:
     environment:
       - APP_PORT=${APP_PORT}
     ports:
-      - 127.0.0.1:${APP_PORT}:${APP_PORT}
+      - ${BASE_URL}:${APP_PORT}:${APP_PORT}
     
