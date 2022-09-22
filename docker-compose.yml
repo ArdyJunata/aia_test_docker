@@ -3,7 +3,7 @@ version: '3.9'
 services:
   frontend:
     build: 
-      context: ../frontend/
+      context: ../aia_test_frontend/
       dockerfile: Dockerfile
     container_name: frontend
     environment:
@@ -13,7 +13,7 @@ services:
       
   backend:
     build: 
-      context: ../backend/
+      context: ../aia_test_backend/
       dockerfile: Dockerfile
     container_name: backend
     environment:
